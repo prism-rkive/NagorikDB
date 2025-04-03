@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="./style_signup.css">
+    <script src="./signup.js" defer></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+        <section class="left">
+            <img src="sigup.png" alt="Logo" style="max-width: 80%; height: auto;">
+        </section>
+        
+        <!-- Right side -->
+        <section class="right">
+        <form>
+            <h1>Sign Up</h1>
+            <div class="a">
+                <ion-icon name="person-outline"></ion-icon>
+                <input type="text" name="name" required>
+                <label>Name</label>
+            </div>
+            <div class="a">
+                <ion-icon name="id-card-outline"></ion-icon>
+                <input type="text" name="NID" required minlength="7" maxlength="7">
+                <label>NID (7 characters)</label>
+            </div>
+            <div class="a">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                <input type="password" id="password" name="password" required oninput="validatePassword(this.value)">
+                <label>Password</label>
+                
+            </div>
+            <div class="form-group">
+                <ul>
+                    <li id="minLength"><i class="fas fa-times text-danger" ></i> Minimum 8 characters</li>
+                    <li id="uppercase"><i class="fas fa-times text-danger"></i> At least one uppercase letter</li>
+                    <li id="lowercase"><i class="fas fa-times text-danger"></i> At least one lowercase letter</li>
+                    <li id="symbol"><i class="fas fa-times text-danger"></i> At least one symbol (@$!%*?&)</li>
+                </ul>
+            </div>
+            <span id="errorMessage" class="font-weight-bold text-danger"></span>
+            <button type="submit">Sign Up</button>
+            <div class="register">
+                <p>Already Have an Account? <a href="login.html">Log In</a></p>
+            </div>
+        </form>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+</body>
+</html>

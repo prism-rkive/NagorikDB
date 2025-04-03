@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Fund Statistics - Nagorik</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body class="starter-page-page">
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+
+      <a href="admin_index.html" class="logo d-flex align-items-center me-auto">
+        <img src="IMG-20241114-WA0001.jpg" alt="">
+        <h1 class="sitename">Nagorik</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="admin_index.html" class="active">Home<br></a></li>
+          <li class="dropdown"><a href="#"><span>Menu</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li class="dropdown"><a href="#"><span>Survey</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="createSurvey.html">Create Survey</a></li>
+                  <li><a href="View_survey.html">View Survey</a></li>
+                  <li><a href="view_all_surveys.html">Survey Statistics</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#"><span>Fundraising Event</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="#">Create New Event</a></li>
+                  <li><a href="#">View Event</a></li>
+                  <li><a href="fundstat.html">Fund Statistics</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="admin_index.html#task">Activity</a></li>
+          <li><a href="admin_index.html#review">Feedback</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      <a class="btn-getstarted flex-md-shrink-0" href="admin_login.html">Logout</a>
+
+    </div>
+  </header>
+
+  <section class="section dashboard">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="row">
+          <div class="col-xxl-4 col-md-6">
+            <div class="card info-card sales-card">
+              <div class="card-body">
+                <h5 class="card-title">Create</h5>
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="ri-article-fill"></i>
+                  </div>
+                  <div class="ps-3">
+                    <h6 class="report"><a href="createEvent.html">Create Fundraising Event</a></h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-12 col-lg-6">
+            <div class="card info-card revenue-card">
+              <div class="card-body">
+                <h5 class="card-title">View</h5>
+                <div class="d-flex align-items-center">
+                  <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                    <i class="bi bi-exclamation-diamond"></i>
+                  </div>
+                  <div class="ps-3">
+                    <h6 class="report"><a href="viewEventadmin.html">View My Fundraising Events</a></h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+		  <div class="col-12 col-lg-6">
+		              <div class="card info-card revenue-card">
+		                <div class="card-body">
+		                  <h5 class="card-title">View</h5>
+		                  <div class="d-flex align-items-center">
+		                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+		                      <i class="bi bi-exclamation-diamond"></i>
+		                    </div>
+		                    <div class="ps-3">
+		                      <h6 class="report"><a href="viewalladminEventStat.html">View All Fundraising Events</a></h6>
+		                    </div>
+		                  </div>
+		                </div>
+		              </div>
+		            </div>
+
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Total Donations by Event</h5>
+            <canvas id="totalDonationsByEventChart" style="max-height: 400px;"></canvas>
+            <script>
+              document.addEventListener("DOMContentLoaded", () => {
+                fetch('http://localhost:8080/api/events/total-donations-by-event')
+                  .then(response => response.json())
+                  .then(data => {
+                    const labels = data.map(item => `Event ${item[0]}`);
+                    const values = data.map(item => item[1]);
+
+                    new Chart(document.querySelector('#totalDonationsByEventChart'), {
+                      type: 'bar',
+                      data: {
+                        labels: labels,
+                        datasets: [{
+                          label: 'Total Donations',
+                          data: values,
+                          backgroundColor: '#2B7A78',
+                          borderColor: '#2B7A78',
+                          borderWidth: 1
+                        }]
+                      },
+                      options: {
+                        scales: { y: { beginAtZero: true } }
+                      }
+                    });
+                  });
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Donations by Date</h5>
+            <canvas id="donationsByDateChart" style="max-height: 400px;"></canvas>
+            <script>
+              document.addEventListener("DOMContentLoaded", () => {
+                fetch('http://localhost:8080/api/donations/grouped-by-date')
+                  .then(response => response.json())
+                  .then(data => {
+                    const labels = data.map(item => item.time);
+                    const donations = data.map(item => item.amount);
+
+                    new Chart(document.querySelector('#donationsByDateChart'), {
+                      type: 'line',
+                      data: {
+                        labels: labels,
+                        datasets: [{
+                          label: 'Donations by Date',
+                          data: donations,
+                          fill: false,
+                          borderColor: '#2B7A78',
+                          tension: 0.1
+                        }]
+                      },
+                      options: {
+                        scales: {
+                          y: { beginAtZero: true, title: { display: true, text: 'Total Donations' } },
+                          x: { title: { display: true, text: 'Date' } }
+                        }
+                      }
+                    });
+                  })
+                  .catch(error => console.error('Error fetching donations by date data:', error));
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="row">
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Donations by User</h5>
+            <canvas id="donationsByUserChart" style="max-height: 400px;"></canvas>
+            <script>
+              document.addEventListener("DOMContentLoaded", () => {
+                fetch('http://localhost:8080/api/events/donations-by-user')
+                  .then(response => response.json())
+                  .then(data => {
+                    const labels = data.map(item => `User ${item[0]}`);
+                    const values = data.map(item => item[1]);
+
+                    new Chart(document.querySelector('#donationsByUserChart'), {
+                      type: 'pie',
+                      data: {
+                        labels: labels,
+                        datasets: [{
+                          label: 'Donations by User',
+                          data: values,
+                          backgroundColor: ['#2B7A78', '#3AAFA9', '#DEF2F1', '#FE4A49', '#FED766'],
+                          hoverOffset: 4
+                        }]
+                      }
+                    });
+                  });
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container copyright text-center mt-4">
+    <p>© <span>Copyright</span> <strong class="px-1 sitename">Nagorik</strong> <span>All Rights Reserved</span></p>
+  </div>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/chart.js/chart.umd.js"></script>
+<script src="assets/vendor/echarts/echarts.min.js"></script>
+<script src="assets/vendor/quill/quill.js"></script>
+<script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+<script src="assets/vendor/tinymce/tinymce.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+
+
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,537 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #DEF2F1;
+    min-height: 100vh;
+
+    /*padding: 20px;*/
+}
+
+h1 {
+    text-align: center;
+}
+
+.emergency {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 30px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    /*border: 2px solid #2B7A78; /* Border color */
+
+}
+.complaint {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin: 30px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    border: 2px solid #2B7A78; /* Border color */
+
+}
+.complaint h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.emergency h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+.status-label {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: default; /* Makes it non-clickable */
+    text-transform: capitalize;
+    margin-left: 10px; /* Add space between category and status buttons */
+}
+
+/* Specific colors for each status */
+.submitted-color {
+    background-color: #90AEAD; /* Orange for submitted */
+}
+
+.processing-color {
+    background-color: #2B7A78; /* Green for rescued */
+}
+.rescued-color {
+    background-color: #024950; /* Green for rescued */
+}
+.assigned-color {
+    background-color: #3AAFA9; /* Blue for assigned */
+}
+
+.delayed-color {
+    background-color: #17252A; /* Red for delayed */
+}
+
+/* Default color if no status matches */
+.default-status-color {
+    background-color: #9e9e9e; /* Gray for default */
+}
+
+.category-label {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: default; /* Makes it non-clickable */
+    text-transform: capitalize;
+}
+
+/* Specific colors for each category */
+.fire-color {
+    background-color: #024950; /* Orange for fire */
+}
+
+.natural-disaster-color {
+    background-color: #2B7A78; /* Green for natural disasters */
+}
+
+.medical-color {
+    background-color: #3AAFA9; /* Blue for medical */
+}
+
+.other-color {
+    background-color: #90AEAD; /* Purple for other */
+}
+
+/* Default color if no category matches */
+.default-color {
+    background-color: purple; /* Gray for default */
+}
+@media (min-width: 1200px) {
+    .navmenu {
+      padding: 0;
+      background-color:#008374;
+      width:100%;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+
+    }
+  
+    .navmenu ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      list-style: none;
+      align-items: center;
+    }
+  
+    .navmenu li {
+      position: relative;
+      font-style: normal;
+    }
+  
+    .navmenu>ul>li {
+      white-space: nowrap;
+      padding: 15px 14px;
+    }
+  
+    .navmenu>ul>li:last-child {
+      padding-right: 0;
+      font-style: normal;
+    }
+  
+    .navmenu a,
+    .navmenu a:focus {
+      color: white;
+      font-size: 15px;
+      padding: 0 2px;
+      font-family: var(--nav-font);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      white-space: nowrap;
+      transition: 0.3s;
+      position: relative;
+    }
+  
+    .navmenu a i,
+    .navmenu a:focus i {
+      font-size: 12px;
+      /*line-height: 0;*/
+      margin-left: 5px;
+      transition: 0.3s;
+    }
+  
+    .navmenu>ul>li>a:before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      bottom: -6px;
+      left: 0;
+      background-color: var(--nav-hover-color);
+      visibility: hidden;
+      width: 0px;
+      transition: all 0.3s ease-in-out 0s;
+    }
+  
+    .navmenu a:hover:before,
+    .navmenu li:hover>a:before,
+    .navmenu .active:before {
+      visibility: visible;
+      width: 100%;
+    }
+  
+    .navmenu li:hover>a,
+    .navmenu .active,
+    .navmenu .active:focus {
+      color: var(--nav-color);
+    }
+  
+    .navmenu .dropdown ul {
+      margin: 0;
+      padding: 10px 0;
+      background: var(--nav-dropdown-background-color);
+      display: block;
+      position: absolute;
+      visibility: hidden;
+      left: 14px;
+      top: 130%;
+      opacity: 0;
+      transition: 0.3s;
+      border-radius: 4px;
+      z-index: 99;
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    }
+  
+    .navmenu .dropdown ul li {
+      min-width: 200px;
+    }
+  
+    .navmenu .dropdown ul a {
+      padding: 10px 20px;
+      font-size: 15px;
+      text-transform: none;
+      color: var(--nav-dropdown-color);
+    }
+  
+    .navmenu .dropdown ul a i {
+      font-size: 12px;
+    }
+  
+    .navmenu .dropdown ul a:hover,
+    .navmenu .dropdown ul .active:hover,
+    .navmenu .dropdown ul li:hover>a {
+      color: var(--nav-dropdown-hover-color);
+    }
+  
+    .navmenu .dropdown:hover>ul {
+      opacity: 1;
+      top: 100%;
+      visibility: visible;
+    }
+  
+    .navmenu .dropdown .dropdown ul {
+      top: 0;
+      left: -90%;
+      visibility: hidden;
+    }
+  
+    .navmenu .dropdown .dropdown:hover>ul {
+      opacity: 1;
+      top: 0;
+      left: -100%;
+      visibility: visible;
+    }
+  }
+  
+  /* Mobile Navigation */
+  @media (max-width: 1199px) {
+    .mobile-nav-toggle {
+      color: var(--nav-color);
+      font-size: 28px;
+      line-height: 0;
+      margin-right: 10px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+  
+    .navmenu {
+      padding: 0;
+      z-index: 9997;
+    }
+  
+    .navmenu ul {
+      display: none;
+      list-style: none;
+      position: absolute;
+      inset: 60px 20px 20px 20px;
+      padding: 10px 0;
+      margin: 0;
+      border-radius: 6px;
+      background-color: var(--nav-mobile-background-color);
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+      box-shadow: none;
+      overflow-y: auto;
+      transition: 0.3s;
+      z-index: 9998;
+    }
+  
+    .navmenu a,
+    .navmenu a:focus {
+      color: var(--nav-dropdown-color);
+      padding: 10px 20px;
+      font-family: var(--nav-font);
+      font-size: 17px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      white-space: nowrap;
+      transition: 0.3s;
+    }
+  
+    .navmenu a i,
+    .navmenu a:focus i {
+      font-size: 12px;
+      line-height: 0;
+      margin-left: 5px;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: 0.3s;
+      background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+    }
+  
+    .navmenu a i:hover,
+    .navmenu a:focus i:hover {
+      background-color: var(--accent-color);
+      color: var(--contrast-color);
+    }
+  
+    .navmenu a:hover,
+    .navmenu .active,
+    .navmenu .active:focus {
+      color: var(--nav-dropdown-hover-color);
+    }
+  
+    .navmenu .active i,
+    .navmenu .active:focus i {
+      background-color: var(--accent-color);
+      color: var(--contrast-color);
+      transform: rotate(180deg);
+    }
+  
+    .navmenu .dropdown ul {
+      position: static;
+      display: none;
+      z-index: 99;
+      padding: 10px 0;
+      margin: 10px 20px;
+      background-color: white;
+      transition: all 0.5s ease-in-out;
+    }
+  
+    .navmenu .dropdown ul ul {
+      background-color: rgba(33, 37, 41, 0.1);
+    }
+  
+    .navmenu .dropdown>.dropdown-active {
+      display: block;
+      background-color: rgba(33, 37, 41, 0.03);
+    }
+  
+    .mobile-nav-active {
+      overflow: hidden;
+    }
+  
+    .mobile-nav-active .mobile-nav-toggle {
+      color: #fff;
+      position: absolute;
+      font-size: 32px;
+      top: 15px;
+      right: 15px;
+      margin-right: 0;
+      z-index: 9999;
+    }
+  
+    .mobile-nav-active .navmenu {
+      position: fixed;
+      overflow: hidden;
+      inset: 0;
+      background: rgba(33, 37, 41, 0.8);
+      transition: 0.3s;
+    }
+  
+    .mobile-nav-active .navmenu>ul {
+      display: block;
+    }
+  }
+  .auth-buttons {
+      position: absolute;
+      right: 20px;
+  }
+  
+  .auth-button {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: #2c7f7a;
+      transition: background-color 0.3s ease;
+  }
+  
+  .auth-button:hover {
+      background-color: #1c5f5a;
+  }
+  
+  /* Mobile menu toggle button */
+  .mobile-nav-toggle {
+      display: none; /* Hide the mobile nav toggle by default */
+  }
+  @media (max-width: 768px) {
+      .navmenu ul {
+          flex-direction: column;
+      }
+  
+      .mobile-nav-toggle {
+          display: block;
+          font-size: 2rem;
+          color: white;
+          cursor: pointer;
+      }
+  }
+  
+button {
+    background-color: #2B7A78;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+}
+/* General styles for buttons */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* Update Status button */
+.status-update-button {
+    background-color:#3a948e;
+    color: #fff;
+    transition: background-color 0.3s;
+    margin-bottom: 10px;
+}
+
+/* Active state for Update Status button */
+.status-update-button.active {
+    background-color: #0056b3;
+}
+
+/* Dropdown container */
+.dropdown-container {
+    display: none; /* Hidden by default */
+    position: relative;
+    margin-top: 5px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    right: 0; /* Align to the right of Update Status button */
+}
+
+
+/* Rescued and Delayed button specific styles */
+.dropdown-option.rescued {
+    background-color: #28a745;
+    color: white;
+}
+
+.dropdown-option.delayed {
+    background-color: #ffc107;
+    color: black;
+}
+
+
+/* Button styling */
+.assign-team-btn {
+    background-color: #2B7A78; /* Primary color */
+    color: #fff;
+    border: none;
+    border-radius: 12px; /* Rounded corners */
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    margin-top: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.assign-team-btn:hover {
+    background-color: #90AEAD; /* Darker shade on hover */
+}
+
+/* Add arrow to the button */
+.assign-team-btn::after {
+    content: '▼'; /* Downward arrow */
+    font-size: 12px;
+    margin-left: 8px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5px;
+}
+
+/* Dropdown container */
+.dropDown{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    margin-top: 5px;
+    max-width: 300px;
+    position: absolute;
+    z-index: 1000;
+}
+
+/* Dropdown items */
+.dropDown-item {
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #333;
+    border-bottom: 1px solid #f0f0f0; /* Thin margin between rows */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:last-child {
+    border-bottom: none; /* No border for the last item */
+}
+
+/* Hover effect for dropdown items */
+.dropDown-item:hover {
+    background-color: #f8f9fa; /* Light gray on hover */
+}
+
+/* Dropdown arrow indicator styling */
+.dropDown::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    left: 20px;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #ddd;
+}
+

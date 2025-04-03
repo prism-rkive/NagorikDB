@@ -1,0 +1,486 @@
+/* Global Styles */
+:root { 
+  --background-color: #DEF2F1; /* Background color for the entire website, including individual sections */
+  --default-color: #222222; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #17252a; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #008374; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+}
+
+/* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+:root {
+  --nav-color: #ffffff;  /* The default color of the main navmenu links */
+  --nav-hover-color: #008374; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #01433c; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #008374; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color:#DEF2F1;
+    align-items: center;
+    justify-content:center;
+    min-height: 100vh;
+    background-repeat: none;
+    background-position:center;
+    background-size:cover;
+    /*margin: 30px;*/
+  }
+/* Form container styling */
+/*form {
+    background-color: #f2f4f7;  /* Light pastel background for th
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 400px;
+    margin: 20px auto;
+    margin-right:30px  ;
+    margin-left: 30px;
+    border: 2px solid #2B7A78; /* Border co
+
+
+}*/
+/*.container {
+    padding: 20px; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0,0.1);
+    margin-bottom: 30px; 
+    padding: 2px 10px;
+    max-width:800px;
+    position:relative;
+    border-radius:20px;
+    justify-content:center;
+    align-items:center;
+    transition: all 0.5s ease-in-out;
+
+  }*/
+.pagetitle{
+    background-color: #DEF2F1;
+
+  }
+.breadcrumb {
+    font-size: 14px;
+    font-family: "Nunito", sans-serif;
+     color: #99a5ba;
+    font-weight: 600;
+  }
+  
+  .breadcrumb a {
+    color: #899bbd;
+    transition: 0.3s;
+  }
+  
+  .breadcrumb a:hover {
+    color: #51678f;
+  }
+  
+  .breadcrumb .breadcrumb-item::before {
+    color: #899bbd;
+  }
+  
+  .breadcrumb .active {
+    color:#899bbd;
+    font-weight: 600;
+  }
+
+/* Label styling */
+.form-label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2B7A78
+    ;  /* Slightly lighter gray for labels */
+ }
+ .form-control {
+    background-color: #ffffff;
+    border: 1px solid #2B7A78;  /* Soft border */
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.form-select {
+    background-color: #ffffff;
+    border: 1px solid #ccc;  /* Soft border */
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+h1{
+    font-family: Arial, sans-serif;
+    font-size :25px;
+    font-weight: bold;
+    color:#2B7A78;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            color:#17252A
+}
+h5 {
+    background-color:#3d7674; /* Dark color with 80% opacity */
+    /*color:#17252A;*/
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color:white;
+    font-weight:700;
+    border-radius: 8px;
+      
+  }
+/* Textarea for "Other" Description */
+#otherDescription textarea {
+    height: 150px;
+    font-size: 14px;
+}
+
+/* File Upload */
+.form-control[type="file"] {
+    padding: 6px 10px;
+    font-size: 14px;
+}
+
+/* Submit Button Styling */
+button[type="submit"] {
+    background-color: #2B7A78;     
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+/* Submit button hover effect */
+button[type="submit"]:hover {
+    background-color: #90AEAD;
+    color:white;   /* Darker green when hovering */
+}
+
+/* Dynamic address and other description sections */
+#addressFields,
+#otherDescription {
+    display: none;  /* Initially hide these sections */
+}
+
+/* Adjusting form section spacing */
+.mb-3 {
+    margin-bottom: 20px;
+}
+
+/* Styling for address fields */
+.select-dropdown {
+    margin-bottom: 15px;
+}
+
+/* General styling for the page */
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Styling for file input */
+input[type="file"] {
+    font-size: 14px;
+}
+#addressFields {
+    display: block;
+}
+
+/* General styles for the navigation menu */
+@media (min-width: 1200px) {
+  .navmenu {
+    padding: 0;
+    background-color:#008374;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+
+  }
+
+  .navmenu ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    list-style: none;
+    align-items: center;
+  }
+
+  .navmenu li {
+    position: relative;
+    font-style: normal;
+  }
+
+  .navmenu>ul>li {
+    white-space: nowrap;
+    padding: 15px 14px;
+  }
+
+  .navmenu>ul>li:last-child {
+    padding-right: 0;
+    font-style: normal;
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    color: white;
+    font-size: 15px;
+    padding: 0 2px;
+    font-family: var(--nav-font);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+    position: relative;
+  }
+
+  .navmenu a i,
+  .navmenu a:focus i {
+    font-size: 12px;
+    /*line-height: 0;*/
+    margin-left: 5px;
+    transition: 0.3s;
+  }
+
+  .navmenu>ul>li>a:before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    bottom: -6px;
+    left: 0;
+    background-color: var(--nav-hover-color);
+    visibility: hidden;
+    width: 0px;
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .navmenu a:hover:before,
+  .navmenu li:hover>a:before,
+  .navmenu .active:before {
+    visibility: visible;
+    width: 100%;
+  }
+
+  .navmenu li:hover>a,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: var(--nav-color);
+  }
+
+  .navmenu .dropdown ul {
+    margin: 0;
+    padding: 10px 0;
+    background: var(--nav-dropdown-background-color);
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    left: 14px;
+    top: 130%;
+    opacity: 0;
+    transition: 0.3s;
+    border-radius: 4px;
+    z-index: 99;
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+  }
+
+  .navmenu .dropdown ul li {
+    min-width: 200px;
+  }
+
+  .navmenu .dropdown ul a {
+    padding: 10px 20px;
+    font-size: 15px;
+    text-transform: none;
+    color: var(--nav-dropdown-color);
+  }
+
+  .navmenu .dropdown ul a i {
+    font-size: 12px;
+  }
+
+  .navmenu .dropdown ul a:hover,
+  .navmenu .dropdown ul .active:hover,
+  .navmenu .dropdown ul li:hover>a {
+    color: var(--nav-dropdown-hover-color);
+  }
+
+  .navmenu .dropdown:hover>ul {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+  }
+
+  .navmenu .dropdown .dropdown ul {
+    top: 0;
+    left: -90%;
+    visibility: hidden;
+  }
+
+  .navmenu .dropdown .dropdown:hover>ul {
+    opacity: 1;
+    top: 0;
+    left: -100%;
+    visibility: visible;
+  }
+}
+
+/* Mobile Navigation */
+@media (max-width: 1199px) {
+  .mobile-nav-toggle {
+    color: var(--nav-color);
+    font-size: 28px;
+    line-height: 0;
+    margin-right: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+
+  .navmenu {
+    padding: 0;
+    z-index: 9997;
+  }
+
+  .navmenu ul {
+    display: none;
+    list-style: none;
+    position: absolute;
+    inset: 60px 20px 20px 20px;
+    padding: 10px 0;
+    margin: 0;
+    border-radius: 6px;
+    background-color: var(--nav-mobile-background-color);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    box-shadow: none;
+    overflow-y: auto;
+    transition: 0.3s;
+    z-index: 9998;
+  }
+
+  .navmenu a,
+  .navmenu a:focus {
+    color: var(--nav-dropdown-color);
+    padding: 10px 20px;
+    font-family: var(--nav-font);
+    font-size: 17px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    white-space: nowrap;
+    transition: 0.3s;
+  }
+
+  .navmenu a i,
+  .navmenu a:focus i {
+    font-size: 12px;
+    line-height: 0;
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: 0.3s;
+    background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+  }
+
+  .navmenu a i:hover,
+  .navmenu a:focus i:hover {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+  }
+
+  .navmenu a:hover,
+  .navmenu .active,
+  .navmenu .active:focus {
+    color: var(--nav-dropdown-hover-color);
+  }
+
+  .navmenu .active i,
+  .navmenu .active:focus i {
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    transform: rotate(180deg);
+  }
+
+  .navmenu .dropdown ul {
+    position: static;
+    display: none;
+    z-index: 99;
+    padding: 10px 0;
+    margin: 10px 20px;
+    background-color: white;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .navmenu .dropdown ul ul {
+    background-color: rgba(33, 37, 41, 0.1);
+  }
+
+  .navmenu .dropdown>.dropdown-active {
+    display: block;
+    background-color: rgba(33, 37, 41, 0.03);
+  }
+
+  .mobile-nav-active {
+    overflow: hidden;
+  }
+
+  .mobile-nav-active .mobile-nav-toggle {
+    color: #fff;
+    position: absolute;
+    font-size: 32px;
+    top: 15px;
+    right: 15px;
+    margin-right: 0;
+    z-index: 9999;
+  }
+
+  .mobile-nav-active .navmenu {
+    position: fixed;
+    overflow: hidden;
+    inset: 0;
+    background: rgba(33, 37, 41, 0.8);
+    transition: 0.3s;
+  }
+
+  .mobile-nav-active .navmenu>ul {
+    display: block;
+  }
+}
+.auth-buttons {
+    position: absolute;
+    right: 20px;
+}
+
+.auth-button {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #2c7f7a;
+    transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+    background-color: #1c5f5a;
+}
+
+/* Mobile menu toggle button */
+.mobile-nav-toggle {
+    display: none; /* Hide the mobile nav toggle by default */
+}
+@media (max-width: 768px) {
+    .navmenu ul {
+        flex-direction: column;
+    }
+
+    .mobile-nav-toggle {
+        display: block;
+        font-size: 2rem;
+        color: white;
+        cursor: pointer;
+    }
+}

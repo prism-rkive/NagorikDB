@@ -1,0 +1,587 @@
+:root { 
+    --background-color: #DEF2F1; /* Background color for the entire website, including individual sections */
+    --default-color: #222222; /* Default color used for the majority of the text content across the entire website */
+    --heading-color: #17252a; /* Color for headings, subheadings and title throughout the website */
+    --accent-color: #008374; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+    --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+    --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  }
+  
+  /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
+  :root {
+    --nav-color: #ffffff;  /* The default color of the main navmenu links */
+    --nav-hover-color: #008374; /* Applied to main navmenu links when they are hovered over or active */
+    --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
+    --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+    --nav-dropdown-color: #01433c; /* Used for navigation links of the dropdown items in the navigation menu. */
+    --nav-dropdown-hover-color: #008374; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  }
+body {
+    font-family: Arial, sans-serif;
+    background-color:#DEF2F1;
+}
+.container {
+    display: flex;
+    justify-content: center; /* Centers the child items horizontally */
+    align-items: center; /* Centers child items vertically if the height of the container is larger than the items */
+    flex-direction: column; /* Stacks cards vertically */
+    margin-bottom: 50px;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+
+  }@media (min-width: 1200px) {
+    .navmenu {
+      padding: 0;
+      background-color:#008374;
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  
+    }
+  
+    .navmenu ul {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      list-style: none;
+      align-items: center;
+    }
+  
+    .navmenu li {
+      position: relative;
+      font-style: normal;
+    }
+  
+    .navmenu>ul>li {
+      white-space: nowrap;
+      padding: 15px 14px;
+    }
+  
+    .navmenu>ul>li:last-child {
+      padding-right: 0;
+      font-style: normal;
+    }
+  
+    .navmenu a,
+    .navmenu a:focus {
+      color: white;
+      font-size: 15px;
+      padding: 0 2px;
+      font-family: var(--nav-font);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      white-space: nowrap;
+      transition: 0.3s;
+      position: relative;
+    }
+  
+    .navmenu a i,
+    .navmenu a:focus i {
+      font-size: 12px;
+      /*line-height: 0;*/
+      margin-left: 5px;
+      transition: 0.3s;
+    }
+  
+    .navmenu>ul>li>a:before {
+      content: "";
+      position: absolute;
+      height: 2px;
+      bottom: -6px;
+      left: 0;
+      background-color: var(--nav-hover-color);
+      visibility: hidden;
+      width: 0px;
+      transition: all 0.3s ease-in-out 0s;
+    }
+  
+    .navmenu a:hover:before,
+    .navmenu li:hover>a:before,
+    .navmenu .active:before {
+      visibility: visible;
+      width: 100%;
+    }
+  
+    .navmenu li:hover>a,
+    .navmenu .active,
+    .navmenu .active:focus {
+      color: var(--nav-color);
+    }
+  
+    .navmenu .dropdown ul {
+      margin: 0;
+      padding: 10px 0;
+      background: var(--nav-dropdown-background-color);
+      display: block;
+      position: absolute;
+      visibility: hidden;
+      left: 14px;
+      top: 130%;
+      opacity: 0;
+      transition: 0.3s;
+      border-radius: 4px;
+      z-index: 99;
+      box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    }
+  
+    .navmenu .dropdown ul li {
+      min-width: 200px;
+    }
+  
+    .navmenu .dropdown ul a {
+      padding: 10px 20px;
+      font-size: 15px;
+      text-transform: none;
+      color: var(--nav-dropdown-color);
+    }
+  
+    .navmenu .dropdown ul a i {
+      font-size: 12px;
+    }
+  
+    .navmenu .dropdown ul a:hover,
+    .navmenu .dropdown ul .active:hover,
+    .navmenu .dropdown ul li:hover>a {
+      color: var(--nav-dropdown-hover-color);
+    }
+  
+    .navmenu .dropdown:hover>ul {
+      opacity: 1;
+      top: 100%;
+      visibility: visible;
+    }
+  
+    .navmenu .dropdown .dropdown ul {
+      top: 0;
+      left: -90%;
+      visibility: hidden;
+    }
+  
+    .navmenu .dropdown .dropdown:hover>ul {
+      opacity: 1;
+      top: 0;
+      left: -100%;
+      visibility: visible;
+    }
+  }
+  
+  /* Mobile Navigation */
+  @media (max-width: 1199px) {
+    .mobile-nav-toggle {
+      color: var(--nav-color);
+      font-size: 28px;
+      line-height: 0;
+      margin-right: 10px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+  
+    .navmenu {
+      padding: 0;
+      z-index: 9997;
+    }
+  
+    .navmenu ul {
+      display: none;
+      list-style: none;
+      position: absolute;
+      inset: 60px 20px 20px 20px;
+      padding: 10px 0;
+      margin: 0;
+      border-radius: 6px;
+      background-color: var(--nav-mobile-background-color);
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+      box-shadow: none;
+      overflow-y: auto;
+      transition: 0.3s;
+      z-index: 9998;
+    }
+  
+    .navmenu a,
+    .navmenu a:focus {
+      color: var(--nav-dropdown-color);
+      padding: 10px 20px;
+      font-family: var(--nav-font);
+      font-size: 17px;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      white-space: nowrap;
+      transition: 0.3s;
+    }
+  
+    .navmenu a i,
+    .navmenu a:focus i {
+      font-size: 12px;
+      line-height: 0;
+      margin-left: 5px;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: 0.3s;
+      background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+    }
+  
+    .navmenu a i:hover,
+    .navmenu a:focus i:hover {
+      background-color: var(--accent-color);
+      color: var(--contrast-color);
+    }
+  
+    .navmenu a:hover,
+    .navmenu .active,
+    .navmenu .active:focus {
+      color: var(--nav-dropdown-hover-color);
+    }
+  
+    .navmenu .active i,
+    .navmenu .active:focus i {
+      background-color: var(--accent-color);
+      color: var(--contrast-color);
+      transform: rotate(180deg);
+    }
+  
+    .navmenu .dropdown ul {
+      position: static;
+      display: none;
+      z-index: 99;
+      padding: 10px 0;
+      margin: 10px 20px;
+      background-color: white;
+      transition: all 0.5s ease-in-out;
+    }
+  
+    .navmenu .dropdown ul ul {
+      background-color: rgba(33, 37, 41, 0.1);
+    }
+  
+    .navmenu .dropdown>.dropdown-active {
+      display: block;
+      background-color: rgba(33, 37, 41, 0.03);
+    }
+  
+    .mobile-nav-active {
+      overflow: hidden;
+    }
+  
+    .mobile-nav-active .mobile-nav-toggle {
+      color: #fff;
+      position: absolute;
+      font-size: 32px;
+      top: 15px;
+      right: 15px;
+      margin-right: 0;
+      z-index: 9999;
+    }
+  
+    .mobile-nav-active .navmenu {
+      position: fixed;
+      overflow: hidden;
+      inset: 0;
+      background: rgba(33, 37, 41, 0.8);
+      transition: 0.3s;
+    }
+  
+    .mobile-nav-active .navmenu>ul {
+      display: block;
+    }
+  }
+  .auth-buttons {
+      position: absolute;
+      right: 20px;
+  }
+  
+  .auth-button {
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: #2c7f7a;
+      transition: background-color 0.3s ease;
+  }
+  
+  .auth-button:hover {
+      background-color: #1c5f5a;
+  }
+  
+  /* Mobile menu toggle button */
+  .mobile-nav-toggle {
+      display: none; /* Hide the mobile nav toggle by default */
+  }
+  @media (max-width: 768px) {
+      .navmenu ul {
+          flex-direction: column;
+      }
+  
+      .mobile-nav-toggle {
+          display: block;
+          font-size: 2rem;
+          color: white;
+          cursor: pointer;
+      }
+  }
+  
+
+
+
+/* General Card Styles */
+.survey-card {
+    border: 2px solid #132128;            /* Light blue border */
+    border-radius: 12px;                   /* Rounded corners */
+    margin: 20px auto; /* Centers each card individually */
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    /*background: linear-gradient(135deg, #e6f7ff, #ccf2ff);*/ 
+    max-width: 1000px;                /* Limit the card width */
+    width: 100%; 
+    color:white;
+    background:#2B7A78;
+    margin-bottom: 20px;   
+   
+}
+#addressFields,
+#otherDescription {
+    display: none;  /* Initially hide these sections */
+}
+
+/* Adjusting form section spacing */
+.mb-3 {
+    margin-bottom: 20px;
+}
+
+/* Styling for address fields */
+.select-dropdown {
+    margin-bottom: 15px;
+}
+h1{
+    font-family: Arial, sans-serif;
+    font-size :25px;
+    font-weight: bold;
+    color:#17252A;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            color:#17252A
+}
+.pagetitle{
+    /*background-color: #DEF2F1;*/
+    background-color:#d3f3f1;/*COLOOOR*/
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+
+  }
+.breadcrumb {
+    font-size: 16px;
+    font-family: "Nunito", sans-serif;
+     color: #99a5ba;
+    font-weight: 600;
+  }
+  
+  .breadcrumb a {
+    color: #99a5ba;
+
+    font-size: 16px;
+    transition: 0.3s;
+  }
+  
+  .breadcrumb a:hover {
+    color: #51678f;
+  }
+  
+  .breadcrumb .breadcrumb-item::before {
+    color: #899bbd;
+  }
+  
+  .breadcrumb .active {
+    color:#899bbd;
+    font-weight: 600;
+  }
+/* Hover Effect */
+.survey-card:hover:not(.active) {
+    transform: scale(1.05);               /* Slightly larger on hover */
+    box-shadow: 0px 6px 15px rgba(0, 170, 255, 0.4); /* Deeper shadow */
+    border-color: #17252A;                /* Darker blue border on hover */
+    animation: pulse 1.5s infinite;       /* Smooth pulsing effect */
+}
+
+/* Stop Hover Effect for Active Cards */
+.survey-card.active {
+    transform: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Restore subtle shadow */
+    animation: none;
+    border-color: #17252A;;                 /* Maintain the original border color */
+    color:white;                       /* Ensure text color remains the same */
+}
+
+/* Card Header */
+.survey-card .card-header {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 8px 8px 0 0;           /* Rounded top corners */
+    color:#17252A;
+    background-color:#DEF2F1
+}
+
+/* Participate Button */
+.participate-btn {
+    background-color: #17252A;            /* Red background color */
+    color: #ffffff;                       /* White text */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+}
+
+/* Button Hover */
+.participate-btn:hover {
+    background-color: #90AEAD;            /* Darker green */
+    transform: translateY(-3px); 
+}
+
+/* Survey Question Styles */
+.survey-question {
+    font-size: 18px;
+    color:white;
+    padding: 10px 0;
+    font-style: italic;
+    /*font-size: 1.2em;
+    font-weight: bold;
+    color: #005f99;                       /* Dark blue color */
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Radio Button Styles */
+.form-check-input {            /* Darker green */
+    accent-color:#90AEAD; ;                /* Custom color for radio buttons */
+}
+input[type="radio"] {
+    accent-color: #003366;
+}
+
+.form-check-label {
+    font-weight: bold;
+    color: #f6f2f2;
+    font-size: 18px;
+}
+
+/* Hover Scale Effect for Each Survey Option */
+.form-check-label:hover {
+    color: #0c2b16;                       /* Dark blue on hover */
+    transform: scale(1.02);               /* Slightly larger text */
+    transition: transform 0.2s ease;
+}
+
+/* Submit Button Styles */
+.submit-btn {
+    background-color: #254E58 ;           /* Green background */
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-weight: bold;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+/* Submit Button Hover */
+.submit-btn:hover {
+    background-color: #90AEAD;            /* Darker green */
+    transform: translateY(-3px);
+}
+
+
+
+/* Results Slider */
+.results-container {
+    margin-top: 20px;
+    color: #092d05; /* Adjust text color for contrast */
+    background-color: #DEF2F1;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0,0.1);
+
+    /*border:2px solid #17252A;*/
+     border-radius: 8px;
+    padding:20px;
+   /* font-weight:bold ;*/
+    font-size: 18px ;
+    font-style: italic;
+}
+.result {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+.slider {
+    min-width:400px;
+    width: 100%;
+    background-color: white;
+    height: 20px;
+    border:1px solid rgb(181, 181, 181);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 10px;
+    position: relative;
+}
+.slider-bar {
+    height: 100%;
+    background-color: #2B7A78; /* Green color for the "Yes" slider bar */
+    transition: width 0.5s ease-in-out;
+}
+
+/* Different color for "No" bar */
+#no-bar {
+    background-color: #3AAFA9; /* Red color for the "No" slider bar */
+}
+
+/* Additional Animations for Dynamic Look 
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}*/
+.custom-yes-btn {
+    background-color: #2B7A78; /* Light green */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.custom-yes-btn:hover {
+    background-color: #024950; /* Darker green on hover */
+}
+
+.custom-no-btn {
+    background-color: #3AAFA9; /* Light red */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.custom-no-btn:hover {
+    background-color: #024950; /* Darker red on hover */
+}
+

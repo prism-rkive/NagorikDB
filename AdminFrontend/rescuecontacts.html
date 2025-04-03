@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="myemergency.css">
+    <link href="emergency.css" rel="stylesheet">
+
+    <title>Team Contacts</title>
+    <style>
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid #90AEAD;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+    <link rel="stylesheet" href="myemergency.css">
+</head>
+<body>
+    
+            <nav id="navmenu" class="navmenu">
+              <ul>
+                <li><a href="responsehome.html" class="active">Home<br></a></li>
+               
+                <li class="dropdown"><a href="#"><span>Emergency</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="unassigned.html">Unassigned</a></li>       
+                    <li><a href="ongoingemergencies.html">Ongoing</a></li>
+                    <li><a href="rescuedem.html">Rescued</a></li>
+                    <li><a href="resolved.html">Resolved</a></li>
+                    <li><a href="delayed.html">Delayed</a></li>
+    
+    
+                   
+                  </ul>
+                </li>
+                <li class="dropdown"><a href="#"><span>Statistics</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                      <li><a href="areaperformance.html">Your Performance</a></li>       
+                      <li><a href="emergencyov2.html">Overall Performance</a></li>
+                        
+                    </ul>
+                  </li>
+                  <li class="dropdown"><a href="#"><span>Rescue Team</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                      <li><a href="rescueteam.html">My Teams</a></li> 
+                      <li><a href="assignedteams.html">Assigned Teams</a></li>       
+          
+                      <li><a href="rescuecontacts.html">Team Contact</a></li>
+                        
+                    </ul>
+                  </li>
+                <div class="auth-button">
+                    <!--a href="signup.html" class="auth-button">Sign Up</a-->
+                    <a href="responselogin.html" class="auth-button">Log Out</a>
+                  </div>
+    
+               
+              </ul>
+             
+              <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+    
+     <br>
+    <h1>Team Contacts</h1>
+    <table id="contactsTable">
+        <thead>
+            <tr>
+                <th>Team ID</th>
+                <th>Contact</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Rows will be dynamically inserted here -->
+        </tbody>
+    </table>
+
+    <script>
+        async function fetchAndRenderTable() {
+            const a_id = sessionStorage.getItem('a_id'); // Replace with actual value
+            const response = await fetch(`http://localhost:8080/api/rescue/contact/${a_id}`);
+            const data = await response.json();
+    
+            const tableBody = document.querySelector("#contactsTable tbody");
+            tableBody.innerHTML = ''; // Clear existing rows
+    
+            // Loop through each team
+            data.forEach(row => {
+                const contacts = row.contacts;
+    
+                // Create the first row for the team (team_id)
+                contacts.forEach((contact, index) => {
+                    const newTr = document.createElement("tr");
+    
+                    // Add the team ID only in the first row and set rowSpan
+                    if (index === 0) {
+                        const teamIdTd = document.createElement("td");
+                        teamIdTd.textContent = row.teamId;
+                        teamIdTd.rowSpan = contacts.length; // Merge team_id across the number of contacts
+                        newTr.appendChild(teamIdTd);
+                    }
+    
+                    // Add the contact for the second column
+                    const contactTd = document.createElement("td");
+                    contactTd.textContent = contact;
+                    newTr.appendChild(contactTd);
+    
+                    tableBody.appendChild(newTr);
+                });
+            });
+        }
+    
+        // Fetch and render table on page load
+        fetchAndRenderTable();
+    </script>
+    
+    <!--script>
+        async function fetchAndRenderTable() {
+            const a_id = sessionStorage.getItem('a_id'); // Replace with actual value
+            const response = await fetch('http://localhost:8080/api/rescue/contact/${a_id}');
+            const data = await response.json();
+    
+            const tableBody = document.querySelector("#contactsTable tbody");
+            tableBody.innerHTML = ''; // Clear existing rows
+    
+            // Loop through each team
+            data.forEach(row => {
+                const teamId = row.teamId;
+                const contacts = row.contacts;
+    
+                // Create the first row with team_id
+                const firstRow = document.createElement("tr");
+                const teamIdTd = document.createElement("td");
+                teamIdTd.textContent = teamId;
+                teamIdTd.rowSpan = contacts.length; // Merge team_id across all rows
+                firstRow.appendChild(teamIdTd);
+                tableBody.appendChild(firstRow);
+    
+                // Create rows for each contact
+                contacts.forEach(contact => {
+                    const tr = document.createElement("tr");
+                    const emptyTd = document.createElement("td"); // Empty cell for team_id
+                    tr.appendChild(emptyTd);
+    
+                    const contactTd = document.createElement("td");
+                    contactTd.textContent = contact;
+                    tr.appendChild(contactTd);
+    
+                    tableBody.appendChild(tr);
+                });
+            });
+        }
+    
+        // Fetch and render table on page load
+        fetchAndRenderTable();
+    <--/script>
+    
+</body>
+</html>
+

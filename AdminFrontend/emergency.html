@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Submission Form</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./emergency.css" rel="stylesheet">
+
+</head>
+<body>
+    
+    
+            <nav id="navmenu" class="navmenu">
+              <ul>
+                <li><a href="index.html">Home<br></a></li>
+                <li><a href="survey.html">Survey</a></li>
+
+                <li class="dropdown"><a href="#"><span>Emergency</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                      <li><a href="emergency.html">Report Emergency</a></li>  
+                      <li><a href="myemergencies.html">My Emergencies</a></li>
+                      <li><a href="emergencyov.html">Performance Statistics</a></li>
+                     
+                    </ul>        
+                  </li>
+                  <li class="dropdown"><a href="#"><span>Complaint</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                      <li><a href="complaint.html">Report Complaint</a></li>  
+                      <li><a href="mycomplaint.html">My Complaint</a></li>
+                      <li><a href="complaintov.html">Performance Statistics</a></li>
+                     
+                    </ul>
+                          
+                         
+                  </li>
+                  <li><a href="fund_index.html">Donate</a></li>
+    
+               
+              </ul>
+             
+              <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+    
+    
+    
+
+    <div class="pagetitle">
+        <!--h1>  Report Emergency</h1-->
+        <!--nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="emergency_front.html">Emergency</a></li>
+            <li class="breadcrumb-item active">Report Emergency</li>
+          </ol>
+        </nav-->
+        </div>
+    <!-- Emergency Form Section -->
+    <div class="container my-5">
+        <h5 class="text-center p-2 heading-background">Report Emergency </h5>
+        <form id="emergencyForm">
+            <!-- Personal Information -->
+            <!--div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" id="name" class="form-control" placeholder="Enter your full name" required>
+            </div>
+            <div class="mb-3">
+                <label for="nid" class="form-label">National ID</label>
+                <input type="text" id="nid" class="form-control" placeholder="Enter National ID" required>
+            </div>
+            <div class="mb-3"> #CONTACT IS IMPORTANT
+                <label for="contact" class="form-label">Contact Number</label>
+                <input type="tel" id="contact" class="form-control" placeholder="Enter contact number" required>
+            </div>
+
+            < Emergency Type Dropdown -->
+            <div class="mb-3">
+                <label for="category" class="form-label">Emergency Type</label>
+                <!--select id="category" class="form-select" required onchange="updateFormFields()"-->
+
+                <select id="category" class="form-select" required>
+                    <option value="">Select Emergency Type</option>
+                    <option value="natural_disaster">Natural Disaster</option>
+                    <option value="fire">Fire</option>
+                    <option value="medical">Medical Emergency</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <!-- Address Fields (Dynamic) -->
+            <div id="addressFields">
+                <div class="mb-3">
+                    <label for="district" class="form-label">District</label>
+                    <select class="form-select" id="district" required>
+                        <option value="">Select District</option>
+                        <option value="Dhaka">Dhaka</option>
+                        <option value="Chittagong">Chittagong</option>
+                        <option value="Sylhet">Sylhet</option>
+                        <option value="Rajshahi">Rajshahi</option>
+                        <option value="Khulna">Khulna</option>
+                        <option value="Barisal">Barisal</option>
+                        <option value="Rangpur">Rangpur</option>
+                        <option value="Mymensingh">Mymensingh</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="postalCode" class="form-label">Postal Code</label>
+                    <input type="text" class="form-control" id="postalCode" placeholder="Enter Postal Code" required>
+                </div>
+                <div class="mb-3">
+                    <label for="thana" class="form-label">Thana</label>
+                    <input type="text" class="form-control" id="thana" placeholder="Enter Thana" required>
+                </div>
+                <div class="mb-3">
+                    <label for="road" class="form-label">Road</label>
+                    <input type="text" class="form-control" id="road" placeholder="Enter Road Number And Details" required>
+                </div>
+                <div class="mb-3">
+                    <label for="house" class="form-label">House</label>
+                    <input type="text" class="form-control" id="house" placeholder="Enter House " required>
+                </div>
+            </div>
+            <div id="No.Affected">
+                <div class="mb-3">
+                    <label for="no_affected" class="form-label">Number of people affected</label>
+                    <input type="number" class="form-control" id="no_affected" placeholder="Enter the number of people affected" optional></textarea>
+                </div>
+            </div>
+            <div id="Description">
+                <div class="mb-3">
+                    <label for="description" class="form-label">Please describe the emergency(Optional)</label>
+                    <textarea id="description" class="form-control" placeholder="Describe the emergency situation here" optional></textarea>
+                </div>
+            </div>
+
+
+            <!-- File Upload Section >
+            <div class="mb-3">
+                <label for="fileUpload" class="form-label">Attach Files (Optional)</label>
+                <input type="file" class="form-control" id="fileUpload" multiple>
+            </div-->
+
+            <!-- Submit Button -->
+            <button type="submit" class="btn btn-success">Submit Report</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="emergency.js"></script>
+</body>
+</html>

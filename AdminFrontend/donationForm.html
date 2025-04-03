@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Donate - Nagorik</title>
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+</head>
+
+<body>
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center">
+      <a href="admin_index.html" class="logo d-flex align-items-center me-auto">
+        <img src="IMG-20241114-WA0001.jpg" alt="">
+        <h1 class="sitename">Nagorik</h1>
+      </a>
+    </div>
+  </header>
+
+  <main class="main mt-5 pt-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Make a Donation</h2>
+
+      <form id="donationForm">
+        <!-- User ID -->
+        <div class="mb-3">
+          <label for="userId" class="form-label">User NID</label>
+          <input type="number" class="form-control" id="userId" name="userId" placeholder="Enter your NID" required>
+        </div>
+
+        <!-- Transaction ID -->
+        <div class="mb-3">
+          <label for="txnId" class="form-label">Transaction ID</label>
+          <input type="number" class="form-control" id="txnId" name="txnId" placeholder="Enter a unique transaction ID" required>
+        </div>
+
+        <!-- Donation Amount -->
+        <div class="mb-3">
+          <label for="amount" class="form-label">Donation Amount</label>
+          <div class="d-flex justify-content-between mb-2">
+            <button type="button" class="btn btn-outline-primary amount-btn" data-amount="10">$10</button>
+            <button type="button" class="btn btn-outline-primary amount-btn" data-amount="20">$20</button>
+            <button type="button" class="btn btn-outline-primary amount-btn" data-amount="50">$50</button>
+            <button type="button" class="btn btn-outline-primary amount-btn" data-amount="100">$100</button>
+            <button type="button" class="btn btn-outline-primary amount-btn" data-amount="200">$200</button>
+          </div>
+          <input type="number" class="form-control" id="donationAmountInput" name="amount" placeholder="Or enter your custom amount" required>
+        </div>
+
+        <!-- Optional Message -->
+        <div class="mb-3">
+          <label for="message" class="form-label">Message (Optional)</label>
+          <textarea class="form-control" id="message" name="message" rows="3" placeholder="Add a personal message (optional)"></textarea>
+        </div>
+
+        <div class="text-center">
+          <button type="submit" class="btn btn-primary">Donate Now</button>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Nagorik</strong> <span>All Rights Reserved</span></p>
+    </div>
+  </footer>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="donation.js"></script>
+</body>
+
+</html>

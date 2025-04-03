@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<html lang="'en">
+    <head>
+        <meta charset="UTF-8">
+        <title>SignUp</title>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <link rel="stylesheet" href="./style_signup.css">
+    </head>
+    <body>
+        <section>
+            <form th:action="@{/register}" method="post">
+                <h1>Sign Up</h1>
+                <div class="a">
+                    <ion-icon name="person-outline"></ion-icon>
+                    <input type="text" name="name" required>
+                    <label>Name</label>
+                </div>
+                <div class="a">
+                    <ion-icon name="id-card-outline"></ion-icon>
+                    <input type="NID" name="NID" required> <!---->
+                    <label>NID</label>
+                </div>
+                <div class="a">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <input type="password" name="password" required>
+                    <label>Password</label>
+                </div>
+                <button>Sign Up</button>
+                <div class="register">
+                    <p>Already Have an Account?<a th:href="@{/Showlogin}">Log In</a></p>
+                </div>
+            </form>
+        </section>
+    </body>
+</html>

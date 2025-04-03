@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+*{
+    margin: 0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+
+}
+body{
+    display:flex;
+    align-items: center;
+    justify-content:right;
+    /*min-height: 100vh;*/
+    background-image: url(sigup.png);
+    background-repeat: none;
+    background-position:center;
+    background-size:cover;
+    margin:55px;
+    margin-top: 80px;
+}
+section{
+    position:relative;
+    min-width:500px;
+    background-color:transparent;/*COLOOOR*/
+    border : 2px solid rgba(255,255,255, 0.5);
+    border-radius:20px;
+    backdrop-filter:blur(50px);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding: 2 rem 3 rem;
+    transition: all 0.5s ease-in-out
+}
+h1{
+    font-size:2 rem;
+    margin:20px;
+    color:white;
+    text-align:center;
+}
+.a{
+    position:relative;
+    margin: 40px 0;/*underline-20*/
+    max-width:550px;
+    border-bottom:2px solid white;/*the underline*/
+    transition: all 0.5s ease-in-out;
+    background: transparent;
+
+}
+.log{
+    position:relative;
+    margin: 40px 0;/*underline-20*/
+    max-width:550px;
+    border-bottom:2px solid white;/*the underline*/
+    transition: all 0.5s ease-in-out;
+    background: transparent;
+
+}
+.a input{/*user input*/
+     width:100%;
+     height:40px;
+     background:transparent;
+     border:none;
+     outline:none;
+     font-size:1rem;
+     padding:0 35px 0 5px;
+     color:#ffff;
+
+}
+.log input{/*user input*/
+    width:100%;
+    height:40px;
+    background:transparent;
+    border:none;
+    outline:none;
+    font-size:1rem;
+    padding:0 35px 0 5px;
+    color:#ffff;
+
+}
+.a ion-icon{
+    position:absolute;
+    top:40%;
+    right:5px;
+    color:#ffff;
+    font-size:1.2 rem;
+    top:20 px;
+    transition:all 0.5s ease-in-out;
+
+}
+.log ion-icon{
+    position:absolute;
+    top:40%;
+    right:5px;
+    color:#ffff;
+    font-size:1.2 rem;
+    top:20 px;
+    transition:all 0.5s ease-in-out;
+
+}
+.a label{
+    position:absolute;
+    top:50%;
+    left:5px;
+    transform:translateY(-50%);
+    background: transparent;
+    color:#ffff;
+    font-size:1rem;
+    pointer-events:none;
+    transition:all 0.5s ease-in-out;
+}
+.log label{
+    position:absolute;
+    top:50%;
+    left:5px;
+    transform:translateY(-50%);
+    background: transparent;
+    color:#ffff;
+    font-size:1rem;
+    pointer-events:none;
+    transition:all 0.5s ease-in-out;
+}
+input:focus~label,
+input:valid~ label{
+    top:-5px;
+    font-size:0.9rem;
+    color:#a8a8a8;/*!!!!!!!!!*/
+
+}
+button{
+    width:100%;
+    height:40px;
+    border-radius:40px;
+    background-color:white;
+    border:none;
+    outline:none;
+    cursor:pointer;
+    font-size:1rem;
+    font-weight:600;
+    transition:all 0.4s ease;
+}
+button:hover{
+    background-color:rgba(255,255,255,0.5);
+
+}
+.register{
+    font-size:0.9rem;
+    color:white;
+    text-align:center;
+    margin:25px 0 10px;
+    transition: all 0.5s ease-in-out;
+}
+.new{
+    font-size:0.9rem;
+    color:white;
+    text-align:center;
+    margin:25px 0 10px;
+    transition: all 0.5s ease-in-out;
+}
+.register p a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    transition:all 0.5s ease-in-out
+}
+
+.new p a{
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    transition:all 0.5s ease-in-out
+}
+.register p a:hover{
+    text-decoration:none;
+    color:#a8a8a8;
+    
+}
+.new p a:hover{
+    text-decoration:none;
+    color:#a8a8a8;
+    
+}

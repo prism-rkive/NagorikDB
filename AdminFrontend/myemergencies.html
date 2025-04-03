@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--meta name="viewport" content="width=device-width, initial-scale=1.0"-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="myemergency.css">
+    <link rel="stylesheet" href="emergency.css">
+
+    <title>User Emergencies</title>
+</head>
+<body>
+    <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html">Home<br></a></li>
+          <li><a href="survey.html">Survey</a></li>
+
+          <li class="dropdown"><a href="#"><span>Emergency</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="emergency.html">Report Emergency</a></li>  
+                <li><a href="myemergencies.html">My Emergencies</a></li>
+                <li><a href="emergencyov.html">Performance Statistics</a></li>
+               
+              </ul>        
+            </li>
+            <li class="dropdown"><a href="#"><span>Complaint</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="complaint.html">Report Complaint</a></li>  
+                <li><a href="mycomplaint.html">My Complaint</a></li>
+                <li><a href="complaintov.html">Performance Statistics</a></li>
+               
+              </ul>
+                    
+                   
+            </li>
+            <li><a href="fund_index.html">Donate</a></li>
+
+         
+        </ul>
+       
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+    <br>
+    <h1>My Reported Emergencies</h1>
+    <section id="emergency-list">
+        <!-- Emergency items will be dynamically populated here -->
+    </section>
+    <script src="myemergencies.js"></script>
+</body>
+</html>
+

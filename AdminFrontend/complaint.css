@@ -1,0 +1,170 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color:#DEF2F1;
+    align-items: center;
+    justify-content:center;
+    min-height: 100vh;
+    background-image: url(images.jpg);
+    background-repeat: none;
+    background-position:center;
+    background-size:cover;
+    margin: 30px;
+    margin-top: 30px;
+  }
+  /* Breadcrumbs */
+  .pagetitle{
+    background-color: #DEF2F1;
+
+  }
+.breadcrumb {
+    font-size: 14px;
+    font-family: "Nunito", sans-serif;
+     color: #99a5ba;
+    font-weight: 600;
+  }
+  
+  .breadcrumb a {
+    color: #899bbd;
+    transition: 0.3s;
+  }
+  
+  .breadcrumb a:hover {
+    color: #51678f;
+  }
+  
+  .breadcrumb .breadcrumb-item::before {
+    color: #899bbd;
+  }
+  
+  .breadcrumb .active {
+    color:#899bbd;
+    font-weight: 600;
+  }
+  form {
+    background-color: #f2f4f7;  /* Light pastel background for the form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-width: 400px;
+    margin: 20px auto;
+    margin-right:30px  ;
+    margin-left: 30px;
+    border: 2px solid #2B7A78; /* Border color */
+
+
+}
+
+  .form-label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #2B7A78
+    ;  /* Slightly lighter gray for labels */
+ }
+ .form-control {
+    background-color: #ffffff;
+    border: 1px solid #2B7A78;  /* Soft border */
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+.form-select {
+    background-color: #ffffff;
+    border: 1px solid #ccc;  /* Soft border */
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+  .full-width-container {
+    width: 100%;
+    padding: 0;
+  }
+  .cover-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .container {
+    padding: 20px; /* Padding around the form */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0,0.1);
+    margin-bottom: 30px; 
+    padding: 2px 10px;
+    min-width:800px;
+    position:relative;
+    border-radius:20px;
+    justify-content:center;
+    align-items:center;
+    transition: all 0.5s ease-in-out;
+
+  }
+
+  h1{
+    font-family: Arial, sans-serif;
+    font-size :25px;
+    font-weight: bold;
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            color:#17252A
+}
+ 
+
+  h5 {
+    background-color: rgba(23, 37, 42, 0.8); /* Dark color with 80% opacity */
+    /*color:#17252A;*/
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: white;
+    border-radius: 8px;
+      
+  }
+
+  form {
+    background-color: #ffffff;
+    padding: 20px ;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    
+  }
+
+  input[type="text"],
+  input[type="email"],
+  select,
+  textarea {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+   button {
+    background-color: #0b294a; /* Change to your desired color */
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .btn-custom {
+    background-color:#17252A; 
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+
+
+  }
+
+  button:hover {
+    background-color: #90AEAD;
+    color:white;
+  }
+  .form-control-file {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    width: 100%;
+  }

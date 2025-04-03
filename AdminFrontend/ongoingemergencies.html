@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--meta name="viewport" content="width=device-width, initial-scale=1.0"-->
+    <link rel="stylesheet" href="myemergency.css">
+    <link rel="stylesheet" href="emergency.css">
+
+
+    <title>Ongoing Emergencies</title>
+</head>
+<body>
+    
+            
+    
+            <nav id="navmenu" class="navmenu">
+              <ul>
+                <li><a href="responsehome.html" class="active">Home<br></a></li>
+               
+                <li class="dropdown"><a href="#"><span>Emergency</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="unassigned.html">Unassigned</a></li>       
+                    <li><a href="ongoingemergencies.html">Ongoing</a></li>
+                    <li><a href="rescuedem.html">Rescued</a></li>
+                    <li><a href="resolved.html">Resolved</a></li>
+                    <li><a href="delayed.html">Delayed</a></li>
+    
+    
+                   
+                  </ul>
+                </li>
+                <li class="dropdown"><a href="#"><span>Statistics</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                      <li><a href="areaperformance.html">Your Performance</a></li>       
+                      <li><a href="emergencyov2.html">Overall Performance</a></li>
+                        
+                    </ul>
+                  </li>
+                  <li class="dropdown"><a href="#"><span>Rescue Team</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                      <li><a href="rescueteam.html">My Teams</a></li> 
+                      <li><a href="assignedteams.html">Assigned Teams</a></li>       
+          
+                      <li><a href="rescuecontacts.html">Team Contact</a></li>
+                        
+                    </ul>
+                  </li>
+                <div class="auth-button">
+                    <!--a href="signup.html" class="auth-button">Sign Up</a-->
+                    <a href="responselogin.html" class="auth-button">Log Out</a>
+                  </div>
+    
+               
+              </ul>
+             
+              <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+            </nav>
+    
+    <br>
+    <h1>Ongoing Emergencies</h1>
+    <section id="emergency-list">
+        <!-- Emergency items will be dynamically populated here -->
+    </section>
+    <script src="assignedem.js"></script>
+</body>
+</html>

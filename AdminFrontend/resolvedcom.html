@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--meta name="viewport" content="width=device-width, initial-scale=1.0"-->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="myemergency.css">
+    <link rel="stylesheet" href="emergency.css">
+
+    <title>Resolved Complaints</title>
+</head>
+<body>
+    
+    <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="sector_response.html" class="active">Home<br></a></li>
+         
+          <li class="dropdown"><a href="#"><span>Complaint</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="un_complaints.html">Unassigned</a></li>
+              <li><a href="assigned.html">Assigned</a></li>       
+              <li><a href="processingcom.html">Processing</a></li>
+              <li><a href="resolvedcom.html">Resolved</a></li>
+
+
+             
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#"><span>Statistics</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="sectorperformance.html">Your Performance</a></li>       
+                <li><a href="complaintov2.html">Overall Performance</a></li>
+                  
+              </ul>
+            </li>
+           
+            </li>
+          <div class="auth-button">
+              <!--a href="signup.html" class="auth-button">Sign Up</a-->
+              <a href="responselogin.html" class="auth-button">Log Out</a>
+            </div>
+
+         
+        </ul>
+       
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+          <br>
+    <h1>Resolved Complaints</h1>
+    <section id="complaint-list">
+        <!-- Emergency items will be dynamically populated here -->
+    </section>
+    <script src="resolvedcom.js"></script>
+</body>
+</html>
